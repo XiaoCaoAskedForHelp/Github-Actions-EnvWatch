@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  watch:
+    name: display default version of ubuntu
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo $PATH
+        node -v
+        npm -v
+        python --version
+        java -version
+        go version
+        mvn -version
+        docker version
+        docker-compose -v
+        git version
+          
+    
+      
